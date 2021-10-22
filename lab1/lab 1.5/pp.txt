@@ -1,0 +1,1 @@
+$ mvn archetype:generate -DgroupId=com.lab1.1.app -DartifactId=MyLab1.1Ana -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false 
