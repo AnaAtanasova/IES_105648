@@ -13,4 +13,16 @@ Maven can also be used to build and manage projects written in C#, Ruby, Scala, 
 The Maven project is hosted by the Apache Software Foundation, where it was formerly part of the Jakarta Project.
 
 c)What would be a likely sequence of Git commands required to contribute with a new feature to a given project?
-(i.e., get a fresh copy, develop some increment, post back the added functionality) 
+(i.e., get a fresh copy, develop some increment, post back the added functionality)
+-git clone, git branch,git commit,git merge
+There are strong opinions on how to write Git commit messages... Find some best practices online and give your own informed 
+recommendations on how to write good commit messages (in a teamproject). 
+-Commit messages need to be consistent and concise.Teams need to decide on a commit message convention
+that fits with their style,content and metadata.There are some rules for git commit messages
+and they are: capitalize the subject line, do not end the subject line with a period, limit the subject line to 50 characters, seperate 
+subject body with blank line, use the body to explain what and why vs how and etc
+E)Docker automatically prepares the required volume space as you start a container. Why is it important that you
+ take an extra step configuring the volumes for a (production) database?
+It is important to use databases because there is less clutter on your machine,
+you can work on multiple projects side by side, you can create a development enviorment and
+everything is documented through automation
