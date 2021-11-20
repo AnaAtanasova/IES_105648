@@ -12,13 +12,12 @@ public class Quotes {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String body;
-    Movies movies;
 
 
     public Quotes(){}
-    public Quotes(String body,Movies movies){
+    public Quotes(String body,Movies movie){
         this.body=body;
-        this.movies=movies;
+        this.movie=movie;
 
     }
 
@@ -28,6 +27,16 @@ public class Quotes {
     public void setId(Long id) {
         this.id = id;
     }
+    @ManyToOne(cascade=CascadeType.ALL)
+    @JoinColumn(name = "movie",referencedColumnName = "", nullable = false)
+    private Movies movie;
+    public Movies getMovies() {
+        return movie;
+    }
+    public void setMovie(Movies movie){
+        this.movie=movie;
+    }
+
     @Column(name = "body", nullable = false)
     public String getBody(String body) {
         return body;
@@ -35,13 +44,9 @@ public class Quotes {
     public void setBody(String body) {
         this.body = body;
     }
-    public String getMovies() {
-        int num_shows=movies.length;
-        String Lista="";
-        for (int i = 0; i < num_shows; i++) {
-            Lista+=" "+i+" "+shows[i]+" ";
-        }
 
-   /* @ManyToOne(mappedBy = "movie")
-    private List<Quotes> quotes;*/
+    @Override
+    public String toString() { return "Quote [id=" + id + ", Body=" + body + ", Movie=" + movie + "]";
+    }
+
 }

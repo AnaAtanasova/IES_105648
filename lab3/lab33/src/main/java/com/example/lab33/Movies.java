@@ -42,8 +42,6 @@ public class Movies {
         this.year = year;
     }
 
-    @OneToMany(mappedBy = "movie", targetEntity = Quotes.class, cascade= CascadeType.ALL)
-    private List<Quotes> quotes;
 
     @Override
     public String toString() { return "Movie [id=" + id + ", Title=" + title + ", Year=" + year + "]";
